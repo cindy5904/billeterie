@@ -11,12 +11,14 @@ import java.util.List;
 @Data
 @Builder
 @AllArgsConstructor
+@Entity
 public class Evenement {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String nom;
-    @Embedded
+    @OneToOne
+    @JoinColumn(name = "lieu")
     private Lieu lieu;
     private LocalDate date;
     private String heure;

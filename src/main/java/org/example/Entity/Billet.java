@@ -1,12 +1,19 @@
 package org.example.Entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.example.Util.TypePlace;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-@Data
+import java.util.List;
 
+@Data
+@Entity
+@AllArgsConstructor
 public class Billet {
+    @Id
     private int id;
     private int numeroPlace;
     @ManyToOne
@@ -14,6 +21,10 @@ public class Billet {
     private TypePlace typePlace;
     @ManyToOne
     private Client client;
+
+    public Billet() {
+
+    }
 
 
     @Override
@@ -26,4 +37,7 @@ public class Billet {
                 ", client=" + client +
                 '}';
     }
+
 }
+
+
