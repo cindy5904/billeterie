@@ -13,6 +13,10 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <!-- Ici spécifier les classes d'entités qui seront gérées par cette unité de persistance-->
         <class>org.example.Entity.Adresse</class>
+        <class>org.example.Entity.Lieu</class>
+        <class>org.example.Entity.Client</class>
+        <class>org.example.Entity.Evenement</class>
+        <class>org.example.Entity.Billet</class>
 
 
         <properties>

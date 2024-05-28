@@ -23,7 +23,7 @@ public class Evenement {
     private LocalDate date;
     private String heure;
     private int nbrePlace;
-    @OneToMany(mappedBy = "billet")
+    @OneToMany(mappedBy = "evenement")
     private List<Billet> billet;
 
     public Evenement() {

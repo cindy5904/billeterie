@@ -5,6 +5,7 @@ import lombok.Data;
 import org.example.Util.TypePlace;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import java.util.List;
@@ -14,6 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Billet {
     @Id
+    @GeneratedValue
     private int id;
     private int numeroPlace;
     @ManyToOne

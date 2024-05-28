@@ -14,4 +14,5 @@ public class BilletIhm {
         this.scanner = scanner;
         billetRepository = new BilletRepository(em);
     }
+
 }

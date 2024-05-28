@@ -115,10 +115,8 @@ public class EvenementIhm {
         if (evenement != null) {
             System.out.println("nom de l'événement : ( " + evenement.getNom() + " )");
             evenement.setNom(scanner.nextLine());
-            System.out.println("Lieu : ( " + evenement.getLieu() + " )");
-            evenement.setLieu(scanner.nextLine());
             System.out.println("Date : (" + evenement.getDate() + ")");
-            evenement.setDate(scanner.nextLine());
+            evenement.setDate(LocalDate.parse(scanner.nextLine()));
             scanner.nextLine();
             evenementRepository.save(evenement);
         } else {
@@ -138,7 +136,6 @@ public class EvenementIhm {
         } else {
             System.out.println("Aucun événement trouvé");
         }
-
     }
 
     }
